@@ -1,0 +1,28 @@
+@startuml
+Bob->Alice : hello
+@enduml
+
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+@enduml
+
+@startuml
+actor Foo1
+boundary Foo2
+control Foo3
+entity Foo4
+database Foo5
+Foo1 -> Foo2 : To boundary
+Foo1 -> Foo3 : To control
+Foo1 -> Foo4 : To entity
+Foo1 -> Foo5 : To database
+
+@enduml
+
+@startuml
+Alice->Alice: This is a signal to self.\nIt also demonstrates\nmultiline \ntext
+@enduml
