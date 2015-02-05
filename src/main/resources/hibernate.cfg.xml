@@ -7,9 +7,9 @@
   <session-factory>
     <!-- Database connection settings -->
     <property name="connection.driver_class">org.postgresql.Driver</property>
-    <property name="connection.url">jdbc:postgresql://127.0.0.1/postgres</property>
-    <property name="connection.username">postgres</property>
-    <property name="connection.password">root</property>
+    <property name="connection.url">jdbc:postgresql://192.168.56.2/postgres</property>
+    <property name="connection.username">packet</property>
+    <property name="connection.password">ericsson</property>
 
     <!-- JDBC connection pool (use the built-in) -->
     <property name="connection.pool_size">1</property>
@@ -47,5 +47,6 @@
     <mapping class="com.hdd.hibernate.study.relation.bidirection.one2one.Driver"/>
     <mapping class="com.hdd.hibernate.study.relation.unidirection.one2one.Car2"/>
     <mapping class="com.hdd.hibernate.study.relation.unidirection.one2one.Driver2"/>
+    <mapping resource="com/hdd/Event.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
