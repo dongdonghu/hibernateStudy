@@ -1,5 +1,6 @@
 package com.hdd;
 
+import javax.persistence.Transient;
 import java.util.Date;
 
 public class Event {
@@ -7,6 +8,8 @@ public class Event {
 
     private String title;
     private Date date;
+	 @Transient
+	 private String transientValue;
 
     public Event() {}
 
@@ -58,4 +61,12 @@ public class Event {
     public void setTitle(String title) {
         this.title = title;
     }
+
+	public String getTransientValue() {
+		return transientValue;
+	}
+
+	public void setTransientValue(String transientValue) {
+		this.transientValue = transientValue;
+	}
 }

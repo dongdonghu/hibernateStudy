@@ -1,10 +1,6 @@
 package com.hdd.hibernate.study.polymorphic.tablepercontereclass;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
@@ -14,8 +10,15 @@ public abstract class Person3 {
 	String name;
 	long age;
 	public static final String FROM_PERSON3 = "from Person3";
-	
-	@GeneratedValue
+
+	// It work find in postgres but doesn't work for mysql
+
+	/**
+	 * @GeneratedValue work in postgresql but not mysql. mysql give error: talbe_per_class can't mix with generation.auto
+	 * It have changet the id generate from auto to table to make it work in mysql
+	 *
+	 */
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	@Id
 	public long getId() {
 		return id;
