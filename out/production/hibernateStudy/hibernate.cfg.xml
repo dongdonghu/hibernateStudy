@@ -47,7 +47,7 @@
     <mapping class="com.hdd.hibernate.study.relation.bidirection.one2one.Driver"/>
     <mapping class="com.hdd.hibernate.study.relation.unidirection.one2one.Car2"/>
     <mapping class="com.hdd.hibernate.study.relation.unidirection.one2one.Driver2"/>
-
+    <mapping class="com.hdd.Device"/>
     <mapping class="com.hdd.hibernate.study.UUIDIdentifier"/>
     <mapping resource="com/hdd/Event.hbm.xml"/>
   </session-factory>
